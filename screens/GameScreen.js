@@ -9,9 +9,7 @@ import {
 import Card from "../components/Card";
 import CardContainer from "../components/CardContainer";
 import Colors from "../constants/colors";
-import {DrawerLayoutAndroid} from 'react-native-web';
 import React from "react";
-import ScoreScreen from "./ScoreScreen";
 import { useState } from "react";
 
 const generateRandomBetween = (min, max, exclude) => {
@@ -135,7 +133,7 @@ const styles = StyleSheet.create({
   },
   money: {},
   nextButton: {
-    marginTop: 200,
+    marginTop: 0,
     alignItems: "flex-end",
   },
 });

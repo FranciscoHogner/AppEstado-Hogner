@@ -14,7 +14,7 @@ const HomeScreen = ({ navigation }) => {
           navigation.navigate("Game");
         }}
       >
-        <View 
+        <View
         style={styles.button}>
           <Text style={styles.buttonText}>COMENZAR</Text>
         </View>

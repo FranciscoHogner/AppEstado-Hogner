@@ -1,4 +1,5 @@
 import {
+  Button,
   Dimensions,
   Modal,
   StyleSheet,
@@ -9,6 +10,7 @@ import {
 
 import Card from "../components/Card";
 import React from "react";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 
 const ScoreScreen = ({ navigation, route }) => {
@@ -45,6 +47,11 @@ const ScoreScreen = ({ navigation, route }) => {
           <Text>Ver Ganancias/Perdidas</Text>
         </View>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Highscore')}>
+        <View>
+          <Text>Ver Scores</Text>
+        </View>
+      </TouchableOpacity>
       <Modal transparent={true} animationType="fade" visible={modalVisible} onRequestClose={() => {setModalVisible(false)}}>
         <TouchableOpacity onPress={() => {setModalVisible(false)}}>
           <View style={styles.modal}>
@@ -52,7 +59,7 @@ const ScoreScreen = ({ navigation, route }) => {
           </View>
         </TouchableOpacity>
       </Modal>
-      {console.log(diferencia)}
+
     </View>
   );
 };
@@ -64,7 +71,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: 'pink',
-    marginTop: 200,
+    marginTop: 100,
     height: Dimensions.get('window').height/5,
     width: Dimensions.get('window').width/3,
     borderRadius: 10,

@@ -1,10 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native';
-
 import AppLoading from 'expo-app-loading';
-import { Asset } from 'expo-asset';
 import GameNavigator from './navigation/GameNavigator';
+import { Provider } from 'react-redux';
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
+import store from './store';
 import { useFonts } from 'expo-font';
 
 export default function App() {
@@ -16,6 +14,6 @@ export default function App() {
   if(!fontsLoaded) return<AppLoading />;
 
   return (
-    <GameNavigator />
+    <Provider store={store}><GameNavigator /></Provider>
   );
 };

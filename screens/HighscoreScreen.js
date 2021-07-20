@@ -4,14 +4,15 @@ import CategoryGridItem from "../components/CategoryGridItem";
 import { FlatList } from "react-native";
 import React from "react";
 import { selectCategory } from "../store/actions/category.action";
+import { selectScore } from "../store/actions/score.action";
 
 const HighscoreScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const highCategory = useSelector((state) => state.categories.list);
 
   const handleSelected = (item) => {
-    dispatch(selectCategory(item.id));
-    navigation.navigate("Highscore", { name: item.name });
+    dispatch(selectScore(item.id));
+    navigation.navigate("ScoreDetails", { name: item.name });
   };
   const renderItem = ({ item }) => (
     <CategoryGridItem item={item} onSelected={handleSelected} />

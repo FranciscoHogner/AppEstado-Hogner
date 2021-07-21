@@ -2,17 +2,17 @@ export const HIGHSCORE = [
   {
     id: "1",
     name: "Juan",
-    color: '#ba9593',
+    color: 'yellow',
   },
   {
     id: "2",
     name: "Gonzalo",
-    color: '#387d7a',
+    color: 'blue',
   },
   {
     id: "3",
     name: "Tomas",
-    color: '#cedfd9',
+    color: 'green',
   },
   {
     id: "4",

@@ -1,5 +1,7 @@
 import AppLoading from 'expo-app-loading';
 import GameNavigator from './navigation/GameNavigator';
+import Tabs from './navigation/TabNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
 import React from 'react';
 import store from './store';
@@ -14,6 +16,10 @@ export default function App() {
   if(!fontsLoaded) return<AppLoading />;
 
   return (
-    <Provider store={store}><GameNavigator /></Provider>
+    <Provider store={store}>
+        <NavigationContainer >
+          <Tabs />
+        </NavigationContainer>
+    </Provider>
   );
 };

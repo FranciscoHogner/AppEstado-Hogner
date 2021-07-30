@@ -85,14 +85,7 @@ const GameScreen = ({ navigation }) => {
           color={Colors.primary}
         ></Button>
       </View>
-      <View style={styles.nextButton}>
-        <Button
-          title="Ver Diferencia"
-          onPress={() => {
-            navigation.push('Score', dinero);
-          }}
-        />
-      </View>
+
     </View>
   );
 };

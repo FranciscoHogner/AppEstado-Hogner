@@ -47,11 +47,6 @@ const ScoreScreen = ({ navigation, route }) => {
           <Text>Ver Ganancias/Perdidas</Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Highscore')}>
-        <View>
-          <Text>Ver Scores</Text>
-        </View>
-      </TouchableOpacity>
       <Modal transparent={true} animationType="fade" visible={modalVisible} onRequestClose={() => {setModalVisible(false)}}>
         <TouchableOpacity onPress={() => {setModalVisible(false)}}>
           <View style={styles.modal}>

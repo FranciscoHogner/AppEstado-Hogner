@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 
 const GameNavigator = () => (
   <NavigationContainer>
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator>
       <Stack.Screen
         name="Home"
         component={HomeScreen}
